@@ -38,7 +38,7 @@ def __onDownloadStarted(api, gid):
             LOGGER.info('Checking File/Folder if already in Drive...')
             sname = download.name
             if dl.listener().isZip:
-                sname = sname + ".zip"
+                sname = f"{sname}.zip"
             elif dl.listener().extract:
                 try:
                     sname = get_base_name(sname)
